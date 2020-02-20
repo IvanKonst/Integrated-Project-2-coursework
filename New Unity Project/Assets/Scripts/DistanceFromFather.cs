@@ -17,11 +17,13 @@ public class DistanceFromFather : MonoBehaviour
         if(distance <= -10 || distance >= 10)
         {
             phaseState = true;
+            GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .5f);
         }
 
         else
         {
             phaseState = false;
+            GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         }
     }
 }

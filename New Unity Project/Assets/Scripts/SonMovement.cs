@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SonMovement : MonoBehaviour
 {
+    //GameObject DistanceFromFather;
     public float speed = 5f;
     public float jump = 5f;
     public bool isGrounded = false;
@@ -17,8 +18,11 @@ public class SonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Jump();
+      //  if (DistanceFromFather.SonIsOnShoulder == false)
+       // {
+            Move();
+            Jump();
+      //  }
     }
 
     void Move()
@@ -34,5 +38,9 @@ public class SonMovement : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jump), ForceMode2D.Impulse);
         }
         
+    }
+    void MoveOnShoulder()
+    {
+
     }
 }

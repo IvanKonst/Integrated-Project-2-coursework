@@ -6,7 +6,7 @@ public class DistanceFromFather : MonoBehaviour
 {
     [SerializeField]
     private Transform father;
-    private bool SonIsOnShoulder = false;
+    public bool SonIsOnShoulder = false;
     public int keypressed=0;
 
     [SerializeField] public Transform shoulder;
@@ -46,6 +46,10 @@ public class DistanceFromFather : MonoBehaviour
                 transform.position = newsonposition.transform.position;
                 gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0f;
                 SonIsOnShoulder = false;
+            }
+            if (Input.GetKeyDown(KeyCode.Q) && SonIsOnShoulder == true)
+            {
+                //Interact
             }
         }
     }

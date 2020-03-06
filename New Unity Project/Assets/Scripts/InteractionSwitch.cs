@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractionObject : MonoBehaviour
+public class InteractionSwitch : MonoBehaviour
 {
+    public GameObject door;
     public void DoInteraction()
     {
-        gameObject.SetActive(false);
+        door.SetActive(false);     
     }
 }

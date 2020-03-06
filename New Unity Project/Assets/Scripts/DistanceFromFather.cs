@@ -36,7 +36,7 @@ public class DistanceFromFather : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.X) && SonIsOnShoulder==false)
             {
                 
-                Debug.Log("asd");
+                //Debug.Log("asd");
                 transform.position = shoulder.transform.position;
                 // son.transform.position = father.transform.position.y;
                 gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.0f;

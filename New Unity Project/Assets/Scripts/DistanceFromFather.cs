@@ -31,7 +31,7 @@ public class DistanceFromFather : MonoBehaviour
             phaseState = false;
             GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         }
-        if(distance <= 3 && distance >-3)
+        if(distance <= 0.5 && distance >-0.5)
         {
             if(Input.GetKeyDown(KeyCode.X) && SonIsOnShoulder==false)
             {

@@ -11,12 +11,13 @@ public class DistanceFromFather : MonoBehaviour
 
     [SerializeField] public Transform shoulder;
     [SerializeField] public Transform newsonposition;
-    private float distance;
+    public float distance;
     public bool phaseState = false;
     //public Vector3 fatherplusy = new Vector3(1f,0f,0f);
 
     void Update()
     {
+       // Debug.Log(father.transform.localrotation.x);
         distance = (father.transform.position.x - transform.position.x);
 
         if(distance <= -10 || distance >= 10)

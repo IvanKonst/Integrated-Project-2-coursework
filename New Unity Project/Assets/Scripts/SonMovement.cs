@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SonMovement : MonoBehaviour
 {
-    public GameObject fathershoulder;
+    public GameObject fathershoulderleft;
+    public GameObject fathershoulderright;
     public DistanceFromFather distancefromfather;
-    //GameObject DistanceFromFather;
     public float speed = 5f;
     public float jump = 5f;
     public bool isGrounded = false;
@@ -27,7 +27,14 @@ public class SonMovement : MonoBehaviour
         }
         else
         {
-            transform.position = fathershoulder.transform.position;
+            if (distancefromfather.distance > 0)
+            {
+                transform.position = fathershoulderleft.transform.position;
+            }
+            else
+            {
+                transform.position = fathershoulderright.transform.position;
+            }
         }
     }
 

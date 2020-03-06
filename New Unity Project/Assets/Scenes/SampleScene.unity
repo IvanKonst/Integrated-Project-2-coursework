@@ -337,6 +337,7 @@ Transform:
   - {fileID: 1690489108}
   - {fileID: 1253008848}
   - {fileID: 960375660}
+  - {fileID: 1415919123}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -703,7 +704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960375659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.252, y: -0.048, z: 0}
+  m_LocalPosition: {x: 0.256, y: -0.048, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 198790659}
@@ -733,11 +734,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253008847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.169, y: 0.091, z: 0}
+  m_LocalPosition: {x: -0.171, y: 0.069, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 198790659}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1415919122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1415919123}
+  m_Layer: 0
+  m_Name: shoulderrightside
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1415919123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415919122}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.204, y: 0.089, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 198790659}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1690489107
 GameObject:
@@ -843,6 +874,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c884005a9701a4aa70f54a4c91ca59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fathershoulderleft: {fileID: 1253008847}
+  fathershoulderright: {fileID: 1415919122}
   distancefromfather: {fileID: 1767007375}
   speed: 3
   jump: 5
@@ -990,6 +1023,7 @@ MonoBehaviour:
   keypressed: 0
   shoulder: {fileID: 1253008848}
   newsonposition: {fileID: 960375660}
+  distance: 0
   phaseState: 0
 --- !u!1001 &632875537412162857
 PrefabInstance:

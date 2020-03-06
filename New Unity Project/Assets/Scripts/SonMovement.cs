@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SonMovement : MonoBehaviour
 {
+    public GameObject fathershoulder;
     public DistanceFromFather distancefromfather;
     //GameObject DistanceFromFather;
     public float speed = 5f;
@@ -26,7 +27,7 @@ public class SonMovement : MonoBehaviour
         }
         else
         {
-
+            transform.position = fathershoulder.transform.position;
         }
     }
 

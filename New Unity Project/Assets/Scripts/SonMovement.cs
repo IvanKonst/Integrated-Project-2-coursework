@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SonMovement : MonoBehaviour
 {
+    public DistanceFromFather distancefromfather;
     //GameObject DistanceFromFather;
     public float speed = 5f;
     public float jump = 5f;
@@ -18,11 +19,15 @@ public class SonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      //  if (DistanceFromFather.SonIsOnShoulder == false)
-       // {
-            Move();
-            Jump();
-      //  }
+        if(distancefromfather.SonIsOnShoulder==false)
+        {
+        Move();
+        Jump();
+        }
+        else
+        {
+
+        }
     }
 
     void Move()

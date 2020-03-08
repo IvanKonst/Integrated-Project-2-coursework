@@ -57,10 +57,10 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        if(Switch.GetComponent<FloorSwitch>().isOn == true)
-        {
-            doorForSwitch.SetActive(false);
-        }
+       // if(Switch.GetComponent<FloorSwitch>().isOn == true)
+      //  {
+      //      doorForSwitch.SetActive(false);
+      //  }
 
         if(son.GetComponent<DistanceFromFather>().phaseState == true && son.GetComponent<SonInteract>().nearPhase == true)
         {

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SonInteract : MonoBehaviour
 {
     [SerializeField]
     GameObject currentInterObj = null;
+    public GameManager gm;
 
     public bool nearPhase = false;
 

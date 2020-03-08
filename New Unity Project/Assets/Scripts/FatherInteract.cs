@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FatherInteract : MonoBehaviour
 {
     [SerializeField]
     GameObject currentInterObj = null;
+    public int Shovel = 0;
 
     void Update()
     {
@@ -20,6 +22,22 @@ public class FatherInteract : MonoBehaviour
         if (collision.CompareTag("InteractableObject"))
         {
             currentInterObj = collision.gameObject;
+        }
+        if (collision.CompareTag("Shovel"))
+        {
+            Debug.Log("ASd");
+            Shovel++;
+
+        }
+
+
+        if (collision.CompareTag("Endofthelevel"))
+        {
+            if (Shovel == 1)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                Debug.Log("yes");
+            }
         }
     }
 

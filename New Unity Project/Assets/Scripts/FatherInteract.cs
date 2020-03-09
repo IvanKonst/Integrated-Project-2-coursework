@@ -33,7 +33,7 @@ public class FatherInteract : MonoBehaviour
 
         if (collision.CompareTag("Endofthelevel"))
         {
-            if (Shovel == 1)
+            if (Shovel >= 1)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 Debug.Log("yes");

@@ -7,17 +7,13 @@ public class SonMovement : MonoBehaviour
     public GameObject fathershoulderleft;
     public GameObject fathershoulderright;
     public DistanceFromFather distancefromfather;
+
     public float speed = 5f;
     public float jump = 5f;
     public bool isGrounded = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
     void Update()
     {
         if(distancefromfather.SonIsOnShoulder==false)
@@ -51,9 +47,5 @@ public class SonMovement : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jump), ForceMode2D.Impulse);
         }
         
-    }
-    void MoveOnShoulder()
-    {
-
     }
 }

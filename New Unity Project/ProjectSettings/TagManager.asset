@@ -11,6 +11,8 @@ TagManager:
   - PhaseInteract
   - Endofthelevel
   - Shovel
+  - Ladders
+  - Wall
   layers:
   - Default
   - TransparentFX

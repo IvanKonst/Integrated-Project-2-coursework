@@ -1,0 +1,41 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ElevatorFloorSwitch2 : MonoBehaviour
+{
+    [SerializeField] GameObject switchOn;
+    [SerializeField] GameObject switchOff;
+
+    [SerializeField] Light spotLight1, spotLight2;
+    [SerializeField] GameObject waterHazard;
+
+    void Start()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = switchOff.GetComponent<SpriteRenderer>().color;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Collider2D>().tag == "Father")
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = switchOn.GetComponent<SpriteRenderer>().color;
+
+            spotLight1.enabled = true;
+            spotLight2.enabled = true;
+            waterHazard.GetComponent<HazardManager>().isOn = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Collider2D>().tag == "Father")
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = switchOff.GetComponent<SpriteRenderer>().color;
+
+            spotLight1.enabled = false;
+            spotLight2.enabled = false;
+            waterHazard.GetComponent<HazardManager>().isOn = false;
+        }
+    }
+}

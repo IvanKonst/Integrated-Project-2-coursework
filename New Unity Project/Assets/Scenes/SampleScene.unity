@@ -354,6 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentInterObj: {fileID: 0}
+  Shovel: 0
 --- !u!1 &334667776 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4707102281839730972, guid: 6a0dbf20079c563438a5899c1519cf8f,
@@ -850,9 +851,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1767007371}
   - component: {fileID: 1767007370}
-  - component: {fileID: 1767007369}
   - component: {fileID: 1767007372}
   - component: {fileID: 1767007373}
+  - component: {fileID: 1767007369}
   - component: {fileID: 1767007374}
   - component: {fileID: 1767007375}
   m_Layer: 0
@@ -1005,6 +1006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentInterObj: {fileID: 0}
+  gm: {fileID: 0}
   nearPhase: 0
 --- !u!114 &1767007375
 MonoBehaviour:

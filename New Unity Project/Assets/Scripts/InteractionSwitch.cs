@@ -5,6 +5,7 @@ using UnityEngine;
 public class InteractionSwitch : MonoBehaviour
 {
     public GameObject door;
+
     public void DoInteraction()
     {
         door.SetActive(false);     

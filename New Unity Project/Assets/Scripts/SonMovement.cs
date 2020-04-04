@@ -10,9 +10,12 @@ public class SonMovement : MonoBehaviour
 
     public float speed = 5f;
     public float jump = 5f;
-    public bool isGrounded = false;
+    public bool isGrounded;
 
-
+    private void Start()
+    {
+        isGrounded = true;
+    }
 
     void Update()
     {

@@ -13,6 +13,7 @@ public class DistanceFromFather : MonoBehaviour
     [SerializeField] public Transform newsonposition;
     public float distance;
     public bool phaseState = false;
+    [SerializeField] private int phaseTriggerDistance;
     //public Vector3 fatherplusy = new Vector3(1f,0f,0f);
 
     void Update()
@@ -20,7 +21,7 @@ public class DistanceFromFather : MonoBehaviour
        // Debug.Log(father.transform.localrotation.x);
         distance = (father.transform.position.x - transform.position.x);
 
-        if(distance <= -10 || distance >= 10)
+        if(distance <= -phaseTriggerDistance || distance >= phaseTriggerDistance)
         {
             phaseState = true;
             GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .5f);

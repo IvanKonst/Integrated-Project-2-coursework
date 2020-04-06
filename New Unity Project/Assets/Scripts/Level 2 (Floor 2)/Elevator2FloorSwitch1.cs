@@ -8,7 +8,6 @@ public class Elevator2FloorSwitch1 : MonoBehaviour
     [SerializeField] GameObject switchOff;
 
     [SerializeField] Light spotLight1;
-    [SerializeField] GameObject door;
 
     void Start()
     {
@@ -22,7 +21,6 @@ public class Elevator2FloorSwitch1 : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().color = switchOn.GetComponent<SpriteRenderer>().color;
 
             spotLight1.enabled = true;
-            door.SetActive(false);
         }
     }
 
@@ -33,7 +31,6 @@ public class Elevator2FloorSwitch1 : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().color = switchOff.GetComponent<SpriteRenderer>().color;
 
             spotLight1.enabled = false;
-            door.SetActive(true);
         }
     }
 }

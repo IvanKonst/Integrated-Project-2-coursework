@@ -11,18 +11,24 @@ public class SonMovement : MonoBehaviour
     public float speed = 5f;
     public float jump = 5f;
     public bool isGrounded;
+    private Animator anim;
+    private bool facingRight = true;
+    private Quaternion localScale;
 
     private void Start()
     {
         isGrounded = true;
+        anim = GetComponent<Animator>();
+        localScale = transform.localRotation;
     }
 
     void Update()
     {
         if(distancefromfather.SonIsOnShoulder==false)
         {
-        Move();
-        Jump();
+            Move();
+            Jump();
+            
         }
         else
         {
@@ -35,6 +41,23 @@ public class SonMovement : MonoBehaviour
                 transform.position = fathershoulderright.transform.position;
             }
         }
+
+       
+    }
+
+    private void LateUpdate()
+    {
+        if (Input.GetAxis("HorizontalSon") < 0)
+        {
+            localScale.y = 0;
+        }
+
+        if (Input.GetAxis("HorizontalSon") > 0)
+        {
+            localScale.y = 180;
+        }
+
+        transform.localRotation = localScale;
     }
 
     void Move()
@@ -49,6 +72,17 @@ public class SonMovement : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jump), ForceMode2D.Impulse);
         }
-        
+
+        if (isGrounded == false)
+        {
+            anim.SetBool("isJumping", true);
+        }
+
+        if (isGrounded == true)
+        {
+            anim.SetBool("isJumping", false);
+        }
+
+
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Elevator2Switch2 : MonoBehaviour
 {
     [SerializeField] GameObject fakeHazard1, fakeHazard2;
+    [SerializeField] GameObject door;
 
     public bool isOn;
 
@@ -19,6 +20,7 @@ public class Elevator2Switch2 : MonoBehaviour
         {
             fakeHazard1.SetActive(true);
             fakeHazard2.SetActive(true);
+            door.SetActive(true);
 
             isOn = true;
 
@@ -28,6 +30,7 @@ public class Elevator2Switch2 : MonoBehaviour
         {
             fakeHazard1.SetActive(false);
             fakeHazard2.SetActive(false);
+            door.SetActive(false);
 
             isOn = false;
 

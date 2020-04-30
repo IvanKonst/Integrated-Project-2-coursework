@@ -8,6 +8,6 @@ public class InteractionSwitch : MonoBehaviour
 
     public void DoInteraction()
     {
-        door.SetActive(false);     
+        door.SetActive(false);
     }
 }

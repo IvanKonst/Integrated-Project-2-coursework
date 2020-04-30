@@ -25,7 +25,7 @@ public class FatherInteract : MonoBehaviour
         }
         if (collision.CompareTag("Shovel"))
         {
-            Debug.Log("ASd");
+            //Debug.Log("ASd");
             Shovel++;
 
         }
@@ -36,7 +36,7 @@ public class FatherInteract : MonoBehaviour
             if (Shovel >= 1)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                Debug.Log("yes");
+                //Debug.Log("yes");
             }
         }
     }

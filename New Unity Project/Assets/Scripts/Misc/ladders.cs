@@ -21,32 +21,32 @@ public class ladders : MonoBehaviour
         if(other.tag== "Son" && Input.GetKey(KeyCode.Space))
         {
             
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed);
+            other.GetComponentInParent<Rigidbody2D>().velocity = new Vector2(0, speed);
         }
         else if(other.tag == "Son" && Input.GetKey(KeyCode.S))
         {
 
-         other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed);
+            other.GetComponentInParent<Rigidbody2D>().velocity = new Vector2(0, -speed);
 
         }
         else
         {
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1);
+            other.GetComponentInParent<Rigidbody2D>().velocity = new Vector2(0, 1);
         }
         if (other.tag == "Father" && Input.GetKey(KeyCode.UpArrow))
         {
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed);
+            other.GetComponentInParent<Rigidbody2D>().velocity = new Vector2(0, speed);
 
         }
         else if (other.tag == "Father" && Input.GetKey(KeyCode.DownArrow))
         {
 
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed);
+            other.GetComponentInParent<Rigidbody2D>().velocity = new Vector2(0, -speed);
 
         }
         else
         {
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1);
+            other.GetComponentInParent<Rigidbody2D>().velocity = new Vector2(0, 1);
         }
     }
 }

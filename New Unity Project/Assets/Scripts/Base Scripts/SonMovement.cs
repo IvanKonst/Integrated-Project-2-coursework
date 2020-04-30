@@ -32,14 +32,8 @@ public class SonMovement : MonoBehaviour
         }
         else
         {
-            if (distancefromfather.distance > 0)
-            {
-                transform.position = fathershoulderleft.transform.position;
-            }
-            else
-            {
-                transform.position = fathershoulderright.transform.position;
-            }
+            transform.position = fathershoulderleft.transform.position;
+            
         }
 
        

@@ -16,7 +16,6 @@ public class SonInteract : MonoBehaviour
         if (Input.GetButtonDown("InteractSon") && currentInterObj)
         {
             currentInterObj.SendMessage("DoInteraction");
-            currentInterObj.SendMessage("SwitchToOpenDoor");
         }
     }
 

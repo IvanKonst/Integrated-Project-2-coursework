@@ -1695,7 +1695,7 @@ GameObject:
   - component: {fileID: 484846241}
   - component: {fileID: 484846244}
   m_Layer: 0
-  m_Name: Memory
+  m_Name: The Rings
   m_TagString: InteractableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
